@@ -1,0 +1,53 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Frontend Mentor | Multi-step form</title>
+</head>
+<div style="-webkit-user-select: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;">
+    <h2 class="title">Finishing up</h2>
+    <p class="description">Double-check everything looks OK before confirming.</p><br>
+    <div class="summarydiv" *ngIf="!checkValidation()">
+        <div class="row plandiv">
+            <h6 *ngIf="step2?.monthly == 1">{{ step2.plan }} (Monthly)</h6>
+            <h6 *ngIf="step2?.monthly == 0">{{ step2.plan }} (Yearly)</h6>
+            <p class="pricems" *ngIf="step2?.plan == 'Arcade' && step2?.monthly == 1">+$9/mo</p>
+            <p class="pricems" *ngIf="step2?.plan == 'Arcade' && step2?.monthly == 0">+$90/yr</p>
+            <p class="pricems" *ngIf="step2?.plan == 'Advanced' && step2?.monthly == 1">+$12/mo</p>
+            <p class="pricems" *ngIf="step2?.plan == 'Advanced' && step2?.monthly == 0">+$120/yr</p>
+            <p class="pricems" *ngIf="step2?.plan == 'Pro' && step2?.monthly == 1">+$15/mo</p>
+            <p class="pricems" *ngIf="step2?.plan == 'Pro' && step2?.monthly == 0">+$150/yr</p>
+        </div>
+        <a routerLink="/selectplan" *ngIf="step2.plan !== undefined">Change</a>
+        <hr *ngIf="step3?.addons.length > 0">
+        <div class="row descriptionsummary" *ngIf="step3?.addons.includes('online')">
+            <p class="description">Online service</p>
+            <p class="pricesm" *ngIf="step2?.monthly">+$1/mo</p>
+            <p class="pricesm" *ngIf="step2?.monthly == 0">+$10/yr</p>
+        </div>
+        <div class="row descriptionsummary" *ngIf="step3?.addons.includes('storage')">
+            <p class="description">Larger storage</p>
+            <p class="pricesm" *ngIf="step2?.monthly">+$2/mo</p>
+            <p class="pricesm" *ngIf="step2?.monthly == 0">+$20/yr</p>
+        </div>
+        <div class="row descriptionsummary" *ngIf="step3?.addons.includes('customizable')">
+            <p class="description">Customizable profile</p>
+            <p class="pricesm" *ngIf="step2?.monthly">+$2/mo</p>
+            <p class="pricesm" *ngIf="step2?.monthly == 0">+$20/yr</p>
+        </div>
+    </div>
+    <div class="total row" *ngIf="!checkValidation()">
+        <p class="description" *ngIf="step2?.monthly == 1">Total (per month)</p>
+        <p class="description" *ngIf="step2?.monthly == 0">Total (per month)</p>
+        <h5 class="pricebg">{{ calculateValue() }}</h5>
+    </div>
+</div>
+<div class="NextContainer smallscreen">
+</div>
+<a class="goback" routerLink="/addons">Go Back</a>
+<button routerLinkActive="active" class="Next" type="button" (click)="this.checkNext()">Confirm</button>
+<p class="NextError" *ngIf="checkValidation()">Fill all previous steps</p>

@@ -1,0 +1,54 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Frontend Mentor | Multi-step form</title>
+</head>
+<div style="-webkit-user-select: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;">
+    <h2 class="title">Select your plan</h2>
+    <p class="description">You have the option of monthly or yearly billing.</p>
+
+    <form style="padding-right: 40px;" id="step2" [formGroup]="step2" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <label class="col col-lg col-md col-12 option-box">
+                <h5 class="titlesm">Arcade</h5>
+                <p class="price" *ngIf="this.MonthlyV">$9/mo</p>
+                <p class="price" *ngIf="this.MonthlyV == false">$90/yr</p>
+                <p class="mfree" *ngIf="this.MonthlyV == false">2 months free</p>
+                <img src="https://imgur.com/LVC6lAn.png" class="icon" height="40px" width="40px">
+                <input class="optionplan" type="radio" name="plan" value="Arcade" formControlName="plan"/>
+            </label>
+            <label class="col col-lg col-md col-12 option-box">
+                <h5 class="titlesm">Advanced</h5>
+                <p class="price" *ngIf="this.MonthlyV">$12/mo</p>
+                <p class="price" *ngIf="this.MonthlyV == false">$120/yr</p>
+                <p class="mfree" *ngIf="this.MonthlyV == false">2 months free</p>
+                <img src="https://imgur.com/nc43fSF.png" class="icon" height="40px" width="40px">
+                <input class="optionplan" type="radio" name="plan" value="Advanced" formControlName="plan" autocomplete="off"/>
+            </label>
+            <label class="col col-lg col-md col-12 option-box">
+                <h5 class="titlesm">Pro</h5>
+                <p class="price" *ngIf="this.MonthlyV">$15/mo</p>
+                <p class="price" *ngIf="this.MonthlyV == false">$150/yr</p>
+                <p class="mfree" *ngIf="this.MonthlyV == false">2 months free</p>
+                <img src="https://imgur.com/q4ta5kj.png" class="icon" height="40px" width="40px">
+                <input class="optionplan" type="radio" name="plan" value="Pro" formControlName="plan" autocomplete="off"/>
+            </label>
+        </div>
+        <div class="timeperiodselect">
+            <h6 class="titleperiodmt ">Monthly</h6>
+            <label class="switch">
+                <input class="switch" type="checkbox" formControlName="monthly" (change)="onClick()">
+                <span class="slider"></span>
+            </label>
+            <h6 class="titleperiodymt">Yearly</h6>
+        </div>
+    </form>
+
+    <div class="NextContainer smallscreen">
+    </div>
+
+    <a class="goback" routerLink="/userinfo" >Go Back</a>
+    <button routerLinkActive="active" class="Next" type="submit" form="step2" value="Submit">Next Step</button>
+</div>

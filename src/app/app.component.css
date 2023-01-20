@@ -1,0 +1,1192 @@
+@media (max-width: 767px) {
+    .body, html{
+        position: relative;
+        background-color: hsl(217, 100%, 97%);
+        display: flex;
+        justify-content: center;
+        height: 90vh;
+        overflow: hidden;
+        z-index: 0;
+        -webkit-user-select: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+    }    
+
+    *{
+        font-family: Ubuntu, sans-serif;
+        font-weight: 400;
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    .smallscreen{
+        display: none;
+    }
+
+    .main-box{
+        position: relative;
+        width: 90%;
+        box-shadow: 0.3rem 0.4rem 1.4rem 0.3rem rgba(0, 0, 0, 0.064);
+        background-color: white;
+        border-radius: 1em;
+        margin-top: 100px;
+        max-height: 100vh !important;
+        height: fit-content;
+    }
+
+    .side-bar{
+        position: absolute;
+        left:-21;
+        z-index: -1;
+        background-image: url('assets/used svg/bg-sidebar-mobile.svg');
+        background-size: cover !important;
+        background-repeat: no-repeat;
+        object-fit: cover !important;
+        border: none;
+        min-width: 101vw;
+        width: 100vw !important;
+        height: 13em;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 85px;
+        padding-right: 85px;
+        padding-bottom: 85px;
+        margin-top: -100px;
+    }
+
+
+    .step{
+        height: auto;
+    }
+
+    .circle {
+        width:32px;
+        height:0;
+        font-size:0.9rem;
+        color:#fff;
+        text-align:center;
+        line-height:0;
+        padding:16px 0;
+        border-radius:50%;
+        border: 1px solid white;
+        float: left;
+        font-weight: 600;
+        transition: 300ms ease-out;
+    }
+
+    .circle:hover{
+        background-color: hsl(228, 100%, 84%);
+        color: black;
+        border: 0;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 300ms ease-in;
+    }
+
+    .circle:after {
+        clear: both;
+        height: 0;
+        width: 100%;
+        content: '';
+        display: block;
+        transition: 300ms ease-in;
+    }
+
+
+    .stepcount{
+        color:hsl(231, 11%, 63%);
+        font-weight: 400;
+        height: 1rem;
+        font-size: smaller;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+    .stepname{
+        color:white;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .active{
+        background-color: hsl(206, 94%, 87%);
+        color: black;
+        border: 0;
+    }
+
+    .steps{
+        padding: 4%;
+        padding-left: 8%;
+        color: hsl(213, 96%, 18%);
+        font-size: 0.8em;
+    }
+
+    .title{
+        margin-top: 10px;
+        font-size: 1.7rem;
+        font-weight: 900;
+    }
+    
+    .titlesm{
+        font-weight: 700;
+        padding-top: 18px;
+        padding-left: 65px;
+        justify-content: right;
+    }
+
+    .option-box .price{
+        padding-left: 65px;
+        font-size: 17px;
+        margin-top: -8px;
+    }
+
+    .description{
+        color: hsl(231, 11%, 63%);
+        font-size: 1.1rem;
+        font-weight: 400;
+        margin-bottom: 1%;
+        margin-right: 15px;
+    }
+
+    .descriptionpi{
+        color: hsl(231, 11%, 63%);
+        font-size: 1.1rem;
+        font-weight: 400;
+        margin-bottom: -17px;
+        margin-right: 10px;
+    }
+
+
+    .price{
+        color: hsl(231, 11%, 63%);
+        font-size: 15px;
+        font-weight: 400;    
+        transition: 300ms ease-in-out;
+    }
+
+    .price2{
+        color: hsl(243, 100%, 62%);
+        font-size: 15px;
+        font-weight: 500;
+        position: relative;
+        margin-left: auto;
+        margin-right: 17px;
+        padding-top: 15px;
+    }
+
+    .price3{
+        color: hsl(243, 100%, 62%);
+        font-size: 15px;
+        font-weight: 500;
+        position: relative;
+        margin-left: auto;
+        margin-right: 17px;
+        padding-top: 15px;
+    }
+
+    .price4{
+        color: hsl(243, 100%, 62%);
+        font-size: 15px;
+        font-weight: 500;
+        position: relative;
+        margin-left: auto;
+        margin-right: 17px;
+        padding-top: 15px;
+    }
+
+    .mfree{
+        position: relative;
+        font-size: 13px;
+        bottom: 15px;
+        left: 65px;
+    }
+
+    .steps > form{
+        margin-top: 5%;
+    }
+
+    label{
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+    .labelContainer{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        height: 1.2rem;
+        width: 90%;
+    }
+    input{
+        transition: 300ms ease-out;
+        border: 0;
+        outline: 0;
+        width: 90%;
+        padding: 1.5%;
+        margin-bottom: 2%;
+        padding-left: 3%;
+        border: 1px solid hsl(229, 24%, 87%);
+        border-radius: 0.25rem;
+        color: hsl(213, 96%, 18%);
+        font-size: 130%;
+        font-weight: 500;
+    }
+    .inputError{
+        font-weight: 600 !important;
+    }
+    .TextBoxAlert{
+        color:red;
+        font-size: 0.9rem;
+        font-weight: 600 !important;
+        height: 2rem;
+        text-align: right;
+        
+    }
+    .ErrorTextBox{
+        border: 1px solid red !important;
+    }
+    input:hover{
+        transition: 300ms ease-in;
+        border: 1px solid hsl(213, 96%, 18%);
+    }
+    input:focus{
+        transition: 300ms ease-in;
+        border: 1px solid hsl(213, 96%, 18%);
+    }
+    input::placeholder{
+        font-weight: 400;
+    }
+
+
+    .red-border{
+        border: 2px solid red !important;
+    }
+    .NextContainer{
+        position: fixed;
+        bottom:0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        width: 110vw;
+        height: 8vh;
+        background-color: #fff;
+    }
+    .Next{
+        position: fixed;
+        right: 10px;
+        bottom: 2vh;
+        background-color: hsl(213, 96%, 18%);
+        color: white;
+        padding: 2% 4% 2% 4%;
+        border-radius: 0.2rem;
+        border: 0;
+        font-size: 1rem;
+        transition: 300ms ease-out;
+    }
+
+    .Next:hover{
+        background-color: hsl(214, 72%, 32%);
+        transition: 300ms ease-in;
+    }
+
+    .AddonBox{
+        width: 90%;
+        height: 5rem;
+        border: 1px solid hsl(229, 24%, 87%);
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        transition: 300ms ease-out; 
+    }
+
+    .AddonBox:hover{
+        transition: 300ms ease-out; 
+        border-color: hsl(228, 100%, 84%);
+        background-color: hsl(231, 100%, 99%);
+    }
+
+    .addonOption{
+        height: 100%;
+        width: 100%;
+        visibility: hidden;
+        position: absolute;
+        transition: 300ms ease-out;  
+    }
+
+    .AddonBox:has(.addonOption:checked){
+        border: 1px solid hsl(213, 96%, 18%);
+        background-color: hsl(231, 100%, 99%)
+    }
+
+    .addoncheck{
+        width: 20px;
+        height: 20px;
+        margin: 1rem;
+        border: 1px solid hsl(229, 24%, 87%);
+        border-radius: 0.2rem;
+        transition: 300ms ease-out;  
+    }
+    .addoncheck:has(.addonOption:checked){
+        background-color: hsl(243, 100%, 62%);
+    }
+
+    .option-box{
+        margin: 10px;
+        padding-left: 10px;
+        border: 1px solid hsl(229, 24%, 87%);
+        border-radius: 2%;
+        min-height: 6em;
+        height: max-content;
+        max-height: 6.5em;
+        transition: 300ms ease-out;    
+    }
+
+    .option-box img{
+        width: auto;
+        height: auto;
+        transform: scale(1.3,1.3);
+    }
+
+    .checkmark{
+        color: white;
+        padding-left: 2px;
+        padding-top: 3.5px;
+        font-size:14px;
+    }
+
+    .option-box:has(.optionplan:checked){
+        transition: 300ms ease-in;
+        border: 1px solid hsl(213, 96%, 18%);
+        background-color: hsl(231, 100%, 99%)
+    }
+
+    .option-box:hover{
+        cursor: pointer;
+        border: 1px solid hsl(228, 100%, 84%);
+        background-color: hsl(231, 100%, 99%);
+        transition: 300ms ease-in;
+    }
+
+    .optionplan{
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .optionplay > input + div{
+        cursor: pointer;
+    }
+
+    .icon{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        padding-left: 5px;
+        padding-top: 5px;
+    }
+
+    .timeperiodselect{
+        background-color: hsl(217, 100%, 97%);
+        height: 50px;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin-right: -6%;
+    }
+
+    .titleperiodmt{
+        font-size: 16px;
+        font-weight: 700;
+        text-align: end;
+        margin-top: 5px;
+    }
+
+    .titleperiodymt{
+        font-size: 16px;
+        font-weight: 700;
+        margin-top: 5px;
+    }
+
+    .switch {
+        position: relative;
+        width: 45px;
+        height: 22px;
+        top: 4px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: hsl(213, 96%, 18%);
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 22px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 12px;
+        width: 12px;
+        left: 4px;
+        bottom: 5.5px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 50%;
+    }
+    
+    .switch input:checked + .slider {
+        background-color: #ccc;
+    }
+    
+    .switch input:focus + .slider {
+        box-shadow: 0 0 1px #ccc;
+    }
+    
+    .switch input:checked + .slider:before {
+        -webkit-transform: translateX(25px);
+        -ms-transform: translateX(25px);
+        transform: translateX(25px);
+    }
+
+    .goback {
+        font-weight: 700;
+        font-size: 16px;
+        position: fixed;
+        left: 15px;
+        bottom: 22px;
+        padding-top: 12px;
+        width: 75px;
+        text-decoration: none;
+        color: hsl(213, 96%, 18%);
+        transition: 300ms ease-in;
+        -webkit-user-drag: none;
+    }
+
+    .goback:hover{
+        color: hsl(228, 100%, 84%);
+    }
+
+    .titlesmall{
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    .descriptionsmall1{
+        color: hsl(231, 11%, 63%);
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 1%;
+        margin-top: 35px;
+        margin-left: -95px;
+    }
+
+    .descriptionsmall2{
+        color: hsl(231, 11%, 63%);
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 1%;
+        margin-top: 35px;
+        margin-left: -100px;
+    } 
+
+    .descriptionsmall3{
+        color: hsl(231, 11%, 63%);
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 1%;
+        margin-top: 35px;
+        margin-left: -140px;
+    } 
+
+    .summarydiv{
+        min-height: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        height: auto;
+        width: 95%;
+        background-color: hsl(217, 100%, 97%);
+        border-radius: 0.5em;
+    }
+
+    .summarydiv h6{
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    .summarydiv a{
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 14px;
+        color: hsl(213, 96%, 18%);
+        -webkit-user-drag: none;
+        transition: 300ms ease-in;
+    }
+
+    .summarydiv a:hover{
+        color: hsl(243, 100%, 62%);
+        transition: 300ms ease-in;
+    }
+
+    .summarydiv p{
+        padding-bottom: 7px;
+    }
+
+    .summarydiv hr{
+        padding-bottom: 10px;
+    }
+
+    .centerContainer{
+        margin-top: 25%;
+        width: 90%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        line-height: 1.4rem;
+    }
+    .centerContainer > *{
+        margin: 0 auto;
+    }
+    .centerContainer > img{
+        width: 5rem;
+        margin: 5px auto;
+    }
+
+    .NextError{
+        position: absolute;
+        color: red;
+        bottom: -1rem;
+        right: 3.7rem;
+        text-align: right;
+    }
+
+    .descriptionsummary{
+        padding-left: 15px;
+        vertical-align: middle;
+    }
+
+    .pricesm{
+        margin-left: auto; 
+        margin-right: 17px;
+    }
+
+    .pricems{
+        font-weight: 700;
+        margin-left: auto; 
+        margin-right: 17px;
+        font-size: 18px;
+    }
+
+    .plandiv{
+        padding-bottom: -10px;
+        margin-bottom: -30px;
+        margin-left: 0;
+    }
+
+    .total{
+        padding-top: 20px;
+        padding-left: 35px;
+    }
+
+    .pricebg{
+        margin-left: auto; 
+        margin-right: 37px;
+        color: hsl(243, 100%, 62%);
+    }
+}
+@media (min-width: 768px) {
+    .body, html{
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-color: hsl(217, 100%, 97%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        -webkit-user-select: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+    }
+
+    *{
+        font-family: Ubuntu, sans-serif;
+        font-weight: 400;
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    .largescreen{
+        display: none;
+    }
+
+    .main-box{
+        width: 950px;
+        height: 595px;
+        box-shadow: 0.3rem 0.4rem 1.4rem 0.3rem rgba(0, 0, 0, 0.064);
+        background-color: white;
+        border-radius: 1em;
+
+        padding: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .side-bar{
+        background-image: url('assets/used svg/bg-sidebar-desktop.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        object-fit: contain;
+        border: none;
+        padding: 35px;
+        padding-left: 30px;
+    }
+
+
+    .step{
+        width: 85%;
+        height: 43px;
+        margin-bottom: 20px;
+    }
+    .circle {
+        width:32px;
+        height:0;
+        font-size:0.9rem;
+        color:#fff;
+        text-align:center;
+        line-height:0;
+        padding:16px 0;
+        border-radius:50%;
+        border: 1px solid white;
+        float: left;
+        margin-right: 13px;
+        margin-bottom: 0;
+        font-weight: 600;
+        transition: 300ms ease-out;
+    }
+
+    .circle:hover{
+        background-color: hsl(228, 100%, 84%);
+        color: black;
+        border: 0;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 300ms ease-in;
+    }
+
+    .circle:after {
+        clear: both;
+        height: 0;
+        width: 100%;
+        content: '';
+        display: block;
+        transition: 300ms ease-in;
+    }
+
+
+    .stepcount{
+        color:hsl(231, 11%, 63%);
+        font-weight: 400;
+        height: 1rem;
+        font-size: smaller;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+    .stepname{
+        color:white;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .active{
+        background-color: hsl(206, 94%, 87%);
+        color: black;
+        border: 0;
+    }
+
+    .steps{
+        padding: 4%;
+        padding-left: 8%;
+        color: hsl(213, 96%, 18%);
+        font-size: 0.8em;
+    }
+
+    .title{
+        font-weight: 900;
+    }
+
+    .titlesm{
+        font-weight: 700;
+        padding-top: 110px;
+        margin: 0;
+    }
+
+    .description{
+        color: hsl(231, 11%, 63%);
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 1%;
+    }
+
+    .price{
+        color: hsl(231, 11%, 63%);
+        font-size: 15px;
+        font-weight: 400;    
+        transition: 300ms ease-in-out;
+    }
+
+    .price2{
+        position: absolute;
+        right: 65px;
+        color: hsl(243, 100%, 62%);
+        font-size: 15px;
+        font-weight: 500;   
+        top: 160px
+    }
+
+    .price3{
+        position: absolute;
+        color: hsl(243, 100%, 62%);
+        font-size: 15px;
+        font-weight: 500;   
+        top: 250px;
+        right: 65px;
+    }
+
+    .price4{
+        position: absolute;
+        right: 65px;
+        color: hsl(243, 100%, 62%);
+        font-size: 15px;
+        font-weight: 500;   
+        margin-left: 163px;
+        top: 335px
+    }
+
+    .mfree{
+        padding-left: 2px;
+        font-size: 13px;
+        margin-top: -15px;
+    }
+
+    .steps > form{
+        margin-top: 5%;
+    }
+
+    label{
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+    .labelContainer{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        height: 2rem;
+        width: 90%;
+    }
+    input{
+        transition: 300ms ease-out;
+        border: 0;
+        outline: 0;
+        width: 90%;
+        padding: 1.5%;
+        margin-bottom: 2%;
+        padding-left: 3%;
+        border: 1px solid hsl(229, 24%, 87%);
+        border-radius: 0.5rem;
+        color: hsl(213, 96%, 18%);
+        font-size: 130%;
+        font-weight: 500;
+    }
+    .inputError{
+        font-weight: 600 !important;
+    }
+    .TextBoxAlert{
+        color:red;
+        font-size: 0.9rem;
+        font-weight: 600 !important;
+        height: 2rem;
+        text-align: right;
+        
+    }
+    .ErrorTextBox{
+        border: 1px solid red !important;
+    }
+    input:hover{
+        transition: 300ms ease-in;
+        border: 1px solid hsl(213, 96%, 18%);
+    }
+    input:focus{
+        transition: 300ms ease-in;
+        border: 1px solid hsl(213, 96%, 18%);
+    }
+    input::placeholder{
+        font-weight: 400;
+    }
+
+
+    .red-border{
+        border: 2px solid red !important;
+    }
+
+    .height{
+        height: 100%;
+    }
+
+    .Next{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: hsl(213, 96%, 18%);
+        color: white;
+        padding: 2% 4% 2% 4%;
+        border-radius: 0.5rem;
+        border: 0;
+        margin-bottom: 20px;
+        margin-right: 80px;
+        font-size: 1rem;
+        transition: 300ms ease-out;
+    }
+
+    .Next:hover{
+        background-color: hsl(214, 72%, 32%);
+        transition: 300ms ease-in;
+    }
+
+    .AddonBox{
+        width: 100%;
+        height: 5rem;
+        border: 1px solid hsl(229, 24%, 87%);
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        transition: 300ms ease-out; 
+    }
+
+    .AddonBox:hover{
+        transition: 300ms ease-out; 
+        border-color: hsl(228, 100%, 84%);
+        background-color: hsl(231, 100%, 99%);
+    }
+
+    .addonOption{
+        height: 100%;
+        width: 100%;
+        visibility: hidden;
+        position: absolute;
+        transition: 300ms ease-out;  
+    }
+
+    .AddonBox:has(.addonOption:checked){
+        border: 1px solid hsl(213, 96%, 18%);
+        background-color: hsl(231, 100%, 99%)
+    }
+
+    .addoncheck{
+        width: 20px;
+        height: 20px;
+        margin: 1.5rem;
+        border: 1px solid hsl(229, 24%, 87%);
+        border-radius: 0.2rem;
+        transition: 300ms ease-out;  
+    }
+    .addoncheck:has(.addonOption:checked){
+        background-color: hsl(243, 100%, 62%);
+    }
+
+    .option-box{
+        margin: 7px;
+        width: 30px;
+        margin-top: 7%;
+        border: 1px solid hsl(229, 24%, 87%);
+        border-radius: 5%;
+        padding: 10px;
+        height: 14em;
+        transition: 300ms ease-out;    
+    }
+
+    .option-box img{
+        width: auto;
+        height: auto;
+    }
+
+    .checkmark{
+        color: white;
+        padding-left: 2px;
+        padding-top: 3.5px;
+        font-size:14px;
+    }
+
+    .option-box:has(.optionplan:checked){
+        transition: 300ms ease-in;
+        border: 1px solid hsl(213, 96%, 18%);
+        background-color: hsl(231, 100%, 99%)
+    }
+
+    .option-box:hover{
+        cursor: pointer;
+        border: 1px solid hsl(228, 100%, 84%);
+        background-color: hsl(231, 100%, 99%);
+        transition: 300ms ease-in;
+    }
+
+    .optionplan{
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .optionplay > input + div{
+        cursor: pointer;
+    }
+
+    .icon{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        padding-left: 5px;
+        padding-top: 5px;
+    }
+
+    .timeperiodselect{
+        background-color: hsl(217, 100%, 97%);
+        border-radius: 0.5rem;
+        margin-top: 15px;
+        width: 100%;
+        height: 3rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 5px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .titleperiodmt{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 12px;
+    }
+    
+    .titleperiodymt{
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 12px;
+    }
+
+    .switch {
+        position: relative;
+        width: 45px;
+        height: 22px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: hsl(213, 96%, 18%);
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 22px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 12px;
+        width: 12px;
+        left: 4px;
+        bottom: 5.5px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+        border-radius: 50%;
+    }
+    
+    .switch input:checked + .slider {
+        background-color: #ccc;
+    }
+    
+    .switch input:focus + .slider {
+        box-shadow: 0 0 1px #ccc;
+    }
+    
+    .switch input:checked + .slider:before {
+        -webkit-transform: translateX(25px);
+        -ms-transform: translateX(25px);
+        transform: translateX(25px);
+    }
+
+    .goback {
+        font-weight: 700;
+        font-size: 16px;
+        position: absolute;
+        top: 500px;
+        padding-top: 12px;
+        width: 75px;
+        text-decoration: none;
+        color: hsl(213, 96%, 18%);
+        transition: 300ms ease-in;
+        -webkit-user-drag: none;
+    }
+
+    .goback:hover{
+        color: hsl(228, 100%, 84%);
+    }
+
+    .titlesmall{
+        font-weight: 700;
+        font-size: 19px;
+    }
+
+    .descriptionsmall1{
+        color: hsl(231, 11%, 63%);
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 1%;
+        margin-top: 35px;
+        margin-left: -128px;
+    } 
+
+    .descriptionsmall2{
+        color: hsl(231, 11%, 63%);
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 1%;
+        margin-top: 35px;
+        margin-left: -134px;
+    } 
+
+    .descriptionsmall3{
+        color: hsl(231, 11%, 63%);
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 1%;
+        margin-top: 35px;
+        margin-left: -188px;
+    } 
+
+    .summarydiv{
+        min-height: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        height: auto;
+        width: 500px;
+        background-color: hsl(217, 100%, 97%);
+        border-radius: 0.5em;
+    }
+
+    .summarydiv h6{
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    .summarydiv a{
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 14px;
+        color: hsl(213, 96%, 18%);
+        -webkit-user-drag: none;
+        transition: 300ms ease-in;
+    }
+
+    .summarydiv a:hover{
+        color: hsl(243, 100%, 62%);
+        transition: 300ms ease-in;
+    }
+
+    .summarydiv p{
+        padding-bottom: 7px;
+    }
+
+    .summarydiv hr{
+        padding-bottom: 10px;
+    }
+
+    .centerContainer{
+        margin-top: 25%;
+        width: 90%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        line-height: 1.4rem;
+    }
+    .centerContainer > *{
+        margin: 0 auto;
+    }
+    .centerContainer > img{
+        width: 5rem;
+        margin: 5px auto;
+    }
+
+    .NextError{
+        position: absolute;
+        color: red;
+        bottom: -1rem;
+        right: 3.7rem;
+        text-align: right;
+    }
+
+    .descriptionsummary{
+        padding-left: 15px;
+        vertical-align: middle;
+    }
+
+    .pricesm{
+        margin-left: auto; 
+        margin-right: 17px;
+    }
+
+    .pricems{
+        font-weight: 700;
+        margin-left: auto; 
+        margin-right: 17px;
+        font-size: 18px;
+    }
+
+    .plandiv{
+        padding-bottom: -10px;
+        margin-bottom: -30px;
+        margin-left: 0;
+    }
+
+    .total{
+        padding-top: 20px;
+        padding-left: 35px;
+    }
+
+    .pricebg{
+        margin-left: auto; 
+        margin-right: 37px;
+        color: hsl(243, 100%, 62%);
+    }
+}
