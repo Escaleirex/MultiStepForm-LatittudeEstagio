@@ -11,7 +11,7 @@
 <div style="-webkit-user-select: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;">
     <h2 class="title">Personal info</h2>
     <p class="description">Please provide your name, email address, and phone number.</p><br>
-    <form id="Step1" [formGroup]="step1" (ngSubmit)="onSubmit()">
+    <form id="Step1" [formGroup]="step1" (ngSubmit)="onSubmit()" class="Userform">
         <div class="labelContainer">
             <label for="name" class="inputLabel">Name</label><br>
 
@@ -67,7 +67,7 @@
         <input [ngClass]="{'ErrorTextBox': this.step1.controls['telephone'].invalid && (this.step1.controls['telephone'].dirty || this.step1.controls['telephone'].touched)}" type="tel" id="telephone" name="telephone" placeholder="e.g. +1 234 567 890" pattern="[\+](([0-9]{1})|([0-9]{2})|([0-9]{3})) [0-9]{3} [0-9]{3} [0-9]{3}" formControlName="telephone" required><br>
         
     </form>
-    <div class="NextContainer smallscreen">
+    <div class="NextContainer">
     </div>
 <button routerLinkActive="active" class="Next" type="submit" form="Step1" value="Submit" [disabled]="!step1.valid">Next Step</button>
 </div>

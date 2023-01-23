@@ -83,7 +83,16 @@ export class SelectplanComponent {
   }
 
   ngOnDestroy() {
-    this.Step2.plan = this.step2.controls["plan"].value!;
+    this.Step2.plan = this.step2.controls['plan'].value!;
+
+    this.MonthlyV = !this.step2.controls['monthly'].value!;
+
+    if(this.MonthlyV == false){
+      this.Step2.monthly = 0;
+    }
+    else if (this.MonthlyV == true){
+      this.Step2.monthly = 1;
+    }
     this.planservice.step2 = this.Step2;
   }
 

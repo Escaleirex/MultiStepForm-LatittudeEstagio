@@ -46,8 +46,6 @@
         <h5 class="pricebg">{{ calculateValue() }}</h5>
     </div>
 </div>
-<div class="NextContainer smallscreen">
-</div>
 <a class="goback" routerLink="/addons">Go Back</a>
 <button routerLinkActive="active" class="Next" type="button" (click)="this.checkNext()">Confirm</button>
 <p class="NextError" *ngIf="checkValidation()">Fill all previous steps</p>

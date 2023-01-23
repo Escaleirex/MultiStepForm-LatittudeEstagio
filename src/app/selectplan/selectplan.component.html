@@ -11,7 +11,7 @@
 
     <form style="padding-right: 40px;" id="step2" [formGroup]="step2" (ngSubmit)="onSubmit()">
         <div class="row">
-            <label class="col col-lg col-md col-12 option-box">
+            <label class="col col-lg col-md-12 col-12 option-box">
                 <h5 class="titlesm">Arcade</h5>
                 <p class="price" *ngIf="this.MonthlyV">$9/mo</p>
                 <p class="price" *ngIf="this.MonthlyV == false">$90/yr</p>
@@ -19,7 +19,7 @@
                 <img src="https://imgur.com/LVC6lAn.png" class="icon" height="40px" width="40px">
                 <input class="optionplan" type="radio" name="plan" value="Arcade" formControlName="plan"/>
             </label>
-            <label class="col col-lg col-md col-12 option-box">
+            <label class="col col-lg col-md-12 col-12 option-box">
                 <h5 class="titlesm">Advanced</h5>
                 <p class="price" *ngIf="this.MonthlyV">$12/mo</p>
                 <p class="price" *ngIf="this.MonthlyV == false">$120/yr</p>
@@ -27,7 +27,7 @@
                 <img src="https://imgur.com/nc43fSF.png" class="icon" height="40px" width="40px">
                 <input class="optionplan" type="radio" name="plan" value="Advanced" formControlName="plan" autocomplete="off"/>
             </label>
-            <label class="col col-lg col-md col-12 option-box">
+            <label class="col col-lg col-md-12 col-12 option-box">
                 <h5 class="titlesm">Pro</h5>
                 <p class="price" *ngIf="this.MonthlyV">$15/mo</p>
                 <p class="price" *ngIf="this.MonthlyV == false">$150/yr</p>
@@ -46,8 +46,6 @@
         </div>
     </form>
 
-    <div class="NextContainer smallscreen">
-    </div>
 
     <a class="goback" routerLink="/userinfo" >Go Back</a>
     <button routerLinkActive="active" class="Next" type="submit" form="step2" value="Submit">Next Step</button>

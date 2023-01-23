@@ -20,9 +20,10 @@
                 <input class="addonOption" type="checkbox" name="addons" value="online" formArrayName="addons" (change)="onCheckboxChange($event)" [checked]="onlinechecked == true"/>
             </div>
             <p class="titlesmall">Online service</p>
-            <p class="descriptionsmall1">Access to multiplayer games</p>
-            <p class="price2" *ngIf="step2?.monthly == 1">+$1/mo</p>
+            <p class="price2" *ngIf="step2?.monthly == 1 || step2?.monthly == undefined">+$1/mo</p>
             <p class="price2" *ngIf="step2?.monthly == 0">+$10/yr</p>
+            <p class="descriptionsmall">Access to multiplayer games</p>
+
         </label>
         <label class="AddonBox">
             <div class="addoncheck">
@@ -30,9 +31,9 @@
                 <input class="addonOption" type="checkbox" name="addons" value="storage" formArrayName="addons" (change)="onCheckboxChange($event)" [checked]="storagechecked == true"/>
             </div>
             <p class="titlesmall">Larger storage</p>
-            <p class="descriptionsmall2">Extra 1TB of cloud save</p>
-            <p class="price3" *ngIf="step2?.monthly == 1">+$2/mo</p>
-            <p class="price3" *ngIf="step2?.monthly == 0">+$20/yr</p>
+            <p class="price2" *ngIf="step2?.monthly == 1 || step2?.monthly == undefined">+$2/mo</p>
+            <p class="price2" *ngIf="step2?.monthly == 0">+$20/yr</p>
+            <p class="descriptionsmall">Extra 1TB of cloud save</p>
         </label>
         <label class="AddonBox">
             <div class="addoncheck">
@@ -40,13 +41,11 @@
                 <input class="addonOption" type="checkbox" name="addons" value="customizable" formArrayName="addons" (change)="onCheckboxChange($event)" [checked]="customizablechecked == true"/>
             </div>
             <p class="titlesmall">Customizable Profile</p>
-            <p class="descriptionsmall3">Custom theme on your profile</p>
-            <p class="price4" *ngIf="step2?.monthly == 1">+$2/mo</p>
-            <p class="price4" *ngIf="step2?.monthly == 0">+$20/yr</p>
+            <p class="price2" *ngIf="step2?.monthly == 1 || step2?.monthly == undefined">+$2/mo</p>
+            <p class="price2" *ngIf="step2?.monthly == 0">+$20/yr</p>
+            <p class="descriptionsmall">Custom theme on your profile</p>
         </label>
     </form>
-    <div class="NextContainer smallscreen">
-    </div>
     <a class="goback" routerLink="/selectplan">Go Back</a>
     <button routerLinkActive="active"class="Next" type="submit" form="step3" value="Submit">Next Step</button>
 </div>

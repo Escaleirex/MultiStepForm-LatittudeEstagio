@@ -13,7 +13,10 @@ import { PlanDataService } from './selectplan/selectplan.dataservice';
 export class AppComponent {
   title = 'multi-step-form-main';
 
-  constructor(private router: Router){}
+  constructor(
+    public planData: PlanDataService,
+    private router: Router
+    ){}
 
   ngOnInit(){
     this.router.navigate([''])
